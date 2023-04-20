@@ -11,7 +11,7 @@ To install and run the application, do the following:
 3. Run `npm install` to install the dependencies.
 4. Run `npm start` to start the development server.
 5. Open your web browser and navigate to `http://localhost:3000`.
-6. You can login with account: {username: test, password: test} on `http://localhost:3000/account/login`
+6. You can login with account: {username: test, password: test} on `http://localhost:3000/account/login` or register on `http://localhost:3000/account/register`
 
 ## File Structure
 

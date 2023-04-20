@@ -244,7 +244,7 @@ button,
             bottom: 0;
             background: $primary-300;
             color: $white;
-            padding: 5px 8px;
+            padding: 6px 8px;
             font-size: 15px;
         }
     }
@@ -364,7 +364,7 @@ button,
             >div {
                 display: block;
                 font-size: 14px;
-                padding: 1px 10px;
+                padding: 3px 10px;
                 color: $white;
                 background: $primary-400;
                 text-decoration: none;
@@ -414,7 +414,7 @@ button,
     button {
         background: $white;
         min-width: 56px;
-        padding: 1px 10px;
+        padding: 2px 10px;
         color: $primary-300;
         margin-right: 15px;
         border: 0;
@@ -509,14 +509,15 @@ button,
         }
 
         .content {
-            height: calc(100% - 10px);
+            height: calc(100% - 25px);
             display: -webkit-box;
-            -webkit-line-clamp: 8;
+            -webkit-line-clamp: 10;
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: normal;
             font-size: 12px;
+            line-height: 1.35;
         }
     }
 }
@@ -603,7 +604,7 @@ button,
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: normal;
-                height: 46px;
+                height: 38px;
                 cursor: pointer;
                 text-decoration: none;
                 color: $dark-400;
@@ -614,6 +615,7 @@ button,
                 color: $primary-400;
                 display: inline-block;
                 margin-right: 10px;
+                margin-top: 6px;
                 cursor: pointer;
             }
         }
