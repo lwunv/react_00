@@ -22,14 +22,14 @@ function Header() {
         return (
             <nav className="header navbar-expand px-3">
                 <div className="navbar-nav container">
-                    <NavLink to="/" className="nav-item logo"><Logo/></NavLink>
-                    <NavLink to="/records" className="nav-item nav-link ml-auto"><Memo/>自分の記録</NavLink>
-                    <NavLink to="/no" className="nav-item nav-link"><Challenge/>チャレンジ</NavLink>
-                    <NavLink to="/no" className="nav-item nav-link"><Info/>お知らせ<span className='count'>{auth.noti || 0}</span></NavLink>
+                    <NavLink to="/" className="nav-item logo"><Logo /></NavLink>
+                    <NavLink to="/records" className="nav-item nav-link ml-auto"><Memo />自分の記録</NavLink>
+                    <NavLink to="/no" className="nav-item nav-link"><Challenge />チャレンジ</NavLink>
+                    <NavLink to="/no" className="nav-item nav-link"><Info />お知らせ<span className='count'>{auth.noti || 0}</span></NavLink>
                     <button onClick={openMenu} className="btn btn-menu nav-item">
-                        {menu ? <Close/> : <IconMenu/>}
+                        {menu ? <Close /> : <IconMenu />}
                     </button>
-                    {menu && <Menu/>}
+                    {menu && <Menu />}
                 </div>
             </nav>
         )
@@ -37,7 +37,7 @@ function Header() {
     return (
         <nav className="header navbar-expand px-3">
             <div className="navbar-nav container">
-                <NavLink to="/" className="nav-item logo"><Logo/></NavLink>
+                <NavLink to="/" className="nav-item logo"><Logo /></NavLink>
             </div>
         </nav>
     )

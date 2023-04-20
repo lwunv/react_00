@@ -37,19 +37,19 @@ function Record() {
     return (
         <div className='record container'>
             <div className='section section-1'>
-                <div className='banner' onClick={()=>scrollToElement(1)}>
+                <div className='banner' onClick={() => scrollToElement(1)}>
                     <div>
                         <h3>BODY RECORD</h3>
                         <div>自分のカラダの記録</div>
                     </div>
                 </div>
-                <div className='banner' onClick={()=>scrollToElement(2)}>
+                <div className='banner' onClick={() => scrollToElement(2)}>
                     <div>
                         <h3>MY EXERCISE</h3>
                         <div>自分の運動の記録</div>
                     </div>
                 </div>
-                <div className='banner' onClick={()=>scrollToElement(3)}>
+                <div className='banner' onClick={() => scrollToElement(3)}>
                     <div>
                         <h3>MY DIARY</h3>
                         <div>自分の日記</div>

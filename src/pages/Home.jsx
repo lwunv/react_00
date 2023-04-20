@@ -18,7 +18,7 @@ function Home() {
     const [type, setType] = useState(0)
 
     useEffect(() => {
-        dispatch(recordActions.getAll({page,type}))
+        dispatch(recordActions.getAll({ page, type }))
     }, [page, type])
 
     const loadMore = () => {
@@ -39,35 +39,35 @@ function Home() {
                 <div className='section-left'>
                     <img src="./images/home1.png" alt="home1" />
                     <div className='content'>
-                        <Circle percent={75} content="05/21"/>
+                        <Circle percent={75} content="05/21" />
                     </div>
                 </div>
                 <div className='section-right'>
-                    <LineChart/>
+                    <LineChart />
                 </div>
             </div>
             <div className='container section section-2'>
-                <div className='hexagon item' onClick={()=>filter(1)}>
+                <div className='hexagon item' onClick={() => filter(1)}>
                     <div>
-                        <Knife/>
+                        <Knife />
                         <div>Morning</div>
                     </div>
                 </div>
-                <div className='hexagon item' onClick={()=>filter(2)}>
+                <div className='hexagon item' onClick={() => filter(2)}>
                     <div>
-                        <Knife/>
+                        <Knife />
                         <div>Lunch</div>
                     </div>
                 </div>
-                <div className='hexagon item' onClick={()=>filter(3)}>
+                <div className='hexagon item' onClick={() => filter(3)}>
                     <div>
-                        <Knife/>
+                        <Knife />
                         <div>Dinner</div>
                     </div>
                 </div>
-                <div className='hexagon item' onClick={()=>filter(4)}>
+                <div className='hexagon item' onClick={() => filter(4)}>
                     <div>
-                        <Cup/>
+                        <Cup />
                         <div>Snack</div>
                     </div>
                 </div>
@@ -84,7 +84,7 @@ function Home() {
                     ))}
                 </div>
                 <div className={records.loading ? 'loading load-more' : 'load-more'}>
-                    {showLoadMore.value ? <button onClick={loadMore} className='btn btn-load-more'>{records.loading ? '...' : '記録をもっと見る'}</button> : ''}
+                    {showLoadMore.value && <button onClick={loadMore} className='btn btn-load-more'>{records.loading ? '...' : '記録をもっと見る'}</button>}
                 </div>
             </div>
         </div>

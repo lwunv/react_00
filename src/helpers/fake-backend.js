@@ -3,39 +3,39 @@ export { fakeBackend }
 // array in local storage for registered users
 const usersKey = 'liam-users'
 const recordsKey = 'liam-records'
-let users = JSON.parse(localStorage.getItem(usersKey)) || [{id: 1, username: 'test', password: 'test', noti: 1}]
-let records = JSON.parse(localStorage.getItem(recordsKey)) || 
+let users = JSON.parse(localStorage.getItem(usersKey)) || [{ id: 1, username: 'test', password: 'test', noti: 1 }]
+let records = JSON.parse(localStorage.getItem(recordsKey)) ||
     [
-        {id: 1, type: 1, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Morning', time: '2021.05.17   23:25'},
-        {id: 101, type: 1, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Morning', time: '2021.05.17   23:25'},
-        {id: 102, type: 1, image: './images/m02.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Morning', time: '2021.05.17   23:25'},
-        {id: 103, type: 1, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Morning', time: '2021.05.17   23:25'},
-        {id: 104, type: 1, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Morning', time: '2021.05.17   23:25'},
-        {id: 2, type: 2, image: './images/m02.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Lunch', time: '2021.05.17   23:25'},
-        {id: 3, type: 3, image: './images/m03.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Dinner', time: '2021.05.17   23:25'},
-        {id: 4, type: 4, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Snack', time: '2021.05.17   23:25'},
-        {id: 5, type: 1, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Morning', time: '2021.05.17   23:25'},
-        {id: 6, type: 2, image: './images/m02.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Lunch', time: '2021.05.17   23:25'},
-        {id: 7, type: 3, image: './images/m03.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Dinner', time: '2021.05.17   23:25'},
-        {id: 8, type: 4, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Snack', time: '2021.05.17   23:25'},
-        {id: 9, type: 1, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Morning', time: '2021.05.17   23:25'},
-        {id: 10, type: 2, image: './images/m02.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Lunch', time: '2021.05.17   23:25'},
-        {id: 11, type: 3, image: './images/m03.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Dinner', time: '2021.05.17   23:25'},
-        {id: 12, type: 4, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Snack', time: '2021.05.17   23:25'},
-        {id: 13, type: 1, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Morning', time: '2021.05.17   23:25'},
-        {id: 14, type: 2, image: './images/m02.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Lunch', time: '2021.05.17   23:25'},
-        {id: 15, type: 3, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Dinner', time: '2021.05.17   23:25'},
-        {id: 16, type: 4, image: './images/m03.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Snack', time: '2021.05.17   23:25'},
-        {id: 17, type: 1, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Morning', time: '2021.05.17   23:25'},
-        {id: 18, type: 2, image: './images/m02.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Lunch', time: '2021.05.17   23:25'},
-        {id: 19, type: 3, image: './images/m03.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Dinner', time: '2021.05.17   23:25'},
-        {id: 20, type: 4, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Snack', time: '2021.05.17   23:25'},
-        {id: 21, type: 1, image: './images/m03.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Morning', time: '2021.05.17   23:25'},
-        {id: 22, type: 2, image: './images/m02.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Lunch', time: '2021.05.17   23:25'},
-        {id: 23, type: 3, image: './images/m03.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Dinner', time: '2021.05.17   23:25'},
-        {id: 24, type: 4, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Snack', time: '2021.05.17   23:25'},
-        {id: 25, type: 4, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Snack', time: '2021.05.17   23:25'},
-    
+        { id: 1, type: 1, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Morning', time: '2021.05.17   23:25' },
+        { id: 101, type: 1, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Morning', time: '2021.05.17   23:25' },
+        { id: 102, type: 1, image: './images/m02.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Morning', time: '2021.05.17   23:25' },
+        { id: 103, type: 1, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Morning', time: '2021.05.17   23:25' },
+        { id: 104, type: 1, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Morning', time: '2021.05.17   23:25' },
+        { id: 2, type: 2, image: './images/m02.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Lunch', time: '2021.05.17   23:25' },
+        { id: 3, type: 3, image: './images/m03.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Dinner', time: '2021.05.17   23:25' },
+        { id: 4, type: 4, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Snack', time: '2021.05.17   23:25' },
+        { id: 5, type: 1, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Morning', time: '2021.05.17   23:25' },
+        { id: 6, type: 2, image: './images/m02.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Lunch', time: '2021.05.17   23:25' },
+        { id: 7, type: 3, image: './images/m03.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Dinner', time: '2021.05.17   23:25' },
+        { id: 8, type: 4, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Snack', time: '2021.05.17   23:25' },
+        { id: 9, type: 1, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Morning', time: '2021.05.17   23:25' },
+        { id: 10, type: 2, image: './images/m02.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Lunch', time: '2021.05.17   23:25' },
+        { id: 11, type: 3, image: './images/m03.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Dinner', time: '2021.05.17   23:25' },
+        { id: 12, type: 4, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Snack', time: '2021.05.17   23:25' },
+        { id: 13, type: 1, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Morning', time: '2021.05.17   23:25' },
+        { id: 14, type: 2, image: './images/m02.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Lunch', time: '2021.05.17   23:25' },
+        { id: 15, type: 3, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Dinner', time: '2021.05.17   23:25' },
+        { id: 16, type: 4, image: './images/m03.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Snack', time: '2021.05.17   23:25' },
+        { id: 17, type: 1, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Morning', time: '2021.05.17   23:25' },
+        { id: 18, type: 2, image: './images/m02.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Lunch', time: '2021.05.17   23:25' },
+        { id: 19, type: 3, image: './images/m03.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Dinner', time: '2021.05.17   23:25' },
+        { id: 20, type: 4, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Snack', time: '2021.05.17   23:25' },
+        { id: 21, type: 1, image: './images/m03.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Morning', time: '2021.05.17   23:25' },
+        { id: 22, type: 2, image: './images/m02.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Lunch', time: '2021.05.17   23:25' },
+        { id: 23, type: 3, image: './images/m03.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Dinner', time: '2021.05.17   23:25' },
+        { id: 24, type: 4, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Snack', time: '2021.05.17   23:25' },
+        { id: 25, type: 4, image: './images/m01.png', title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ', content: '05.21.Snack', time: '2021.05.17   23:25' },
+
     ]
 
 function fakeBackend() {
@@ -45,7 +45,7 @@ function fakeBackend() {
             // wrap in timeout to simulate server api call
             setTimeout(handleRoute, 500)
             // const regex = /page=(\d+)&size=(\d+)/
-        
+
             function handleRoute() {
                 switch (true) {
                     case url.endsWith('/users/authenticate') && opts.method === 'POST':
@@ -106,9 +106,9 @@ function fakeBackend() {
                 const start = (page - 1) * 8
                 const end = start + 8
                 let data = records
-                if (type) data = data.filter((item)=>{return item.type === type})
+                if (type) data = data.filter((item) => { return item.type === type })
                 data = data.slice(start, end)
-                return ok({data, page})
+                return ok({ data, page })
             }
 
             function getUsers() {

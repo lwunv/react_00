@@ -1,6 +1,6 @@
 # My React App
 
-This is a simple ReactJS application that allows users to do X, Y, and Z.
+This is a simple ReactJS application.
 
 ## Installation
 
@@ -40,10 +40,6 @@ The project relies on the following dependencies:
 - react-redux
 - react-scripts
 - bootstrap
-
-## Contributing
-
-We welcome contributions from other developers! Please see our CONTRIBUTING.md file for more information.
 
 ## License
 

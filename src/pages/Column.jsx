@@ -12,7 +12,7 @@ function Column() {
     const [page, setPage] = useState(1)
 
     useEffect(() => {
-        dispatch(recordActions.getAll({page, type: 0}))
+        dispatch(recordActions.getAll({ page, type: 0 }))
     }, [page])
 
     const loadMore = () => {

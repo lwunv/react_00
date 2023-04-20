@@ -90,6 +90,7 @@ button,
 
 .footer {
     padding: 45px 15px;
+
     .nav-item {
         margin-right: 40px;
     }
@@ -204,6 +205,7 @@ button,
             background: $dark-600;
             display: flex;
             align-items: flex-end;
+
             canvas {
                 max-width: 100%;
             }
@@ -307,6 +309,7 @@ button,
 
 .record {
     padding-bottom: 55px;
+
     .section-1 {
         display: flex;
         justify-content: space-between;
@@ -376,6 +379,7 @@ button,
         margin-bottom: 55px;
         color: $white;
     }
+
     .section-4 {
         h3 {
             font-size: 22px;
@@ -485,6 +489,7 @@ button,
         aspect-ratio: 1 / 1;
         overflow: hidden;
         text-overflow: clip;
+
         >div {
             padding: 15px;
             border: 2px solid $dark-400;
@@ -512,6 +517,7 @@ button,
 
 .column {
     padding: 55px 0;
+
     .section-1 {
         display: flex;
         flex-wrap: wrap;
@@ -520,14 +526,17 @@ button,
         margin-bottom: 55px;
         flex-wrap: wrap;
     }
+
     .banner {
         display: flex;
         position: relative;
         padding: 0 16px;
         width: 25%;
+
         @media (max-width: 768px) {
             margin-bottom: 15px;
         }
+
         >div {
             display: flex;
             align-items: center;
@@ -537,18 +546,21 @@ button,
             text-align: center;
             padding: 24px 15px;
             width: 100%;
+
             hr {
                 height: 1px;
                 width: 56px;
                 color: $white;
                 margin: 0 auto;
             }
+
             h3 {
                 color: $primary-300;
                 font-size: 22px;
                 font-weight: normal;
                 width: 100%;
             }
+
             a {
                 font-size: 18px;
                 display: block;
@@ -560,6 +572,7 @@ button,
         }
     }
 }
+
 .blogs {
     display: flex;
     flex-wrap: wrap;
@@ -572,8 +585,10 @@ button,
         padding: 0 4px;
         margin-bottom: 15px;
         width: 25%;
+
         .content {
             padding-top: 5px;
+
             .title {
                 display: -webkit-box;
                 -webkit-line-clamp: 2;
@@ -586,7 +601,8 @@ button,
                 text-decoration: none;
                 color: $dark-400;
             }
-            .tags >a {
+
+            .tags>a {
                 font-size: 12px;
                 color: $primary-400;
                 display: inline-block;
@@ -599,6 +615,7 @@ button,
             position: relative;
             margin: 0 auto;
             width: fit-content;
+
             .time {
                 position: absolute;
                 left: 0;
@@ -614,17 +631,20 @@ button,
 
 
 @media (max-width: 768px) {
-    .header  {
-        >.navbar-nav >.nav-link {
+    .header {
+        >.navbar-nav>.nav-link {
             display: none;
         }
+
         .btn-menu {
             margin-left: auto !important;
         }
     }
-    .home .section-1 { 
+
+    .home .section-1 {
         display: block;
     }
+
     .home .section-1 .section-left,
     .home .section-1 .section-right,
     .records .record,
@@ -636,10 +656,12 @@ button,
         width: 100%;
         max-width: none;
     }
+
     .footer .nav-item {
         display: block;
         width: 100%;
     }
+
     .diaries .diarie {
         aspect-ratio: auto;
     }
