@@ -55,7 +55,7 @@ button,
     font-family: 'Hiragino Kaku Gothic Pro', sans-serif;
     font-size: 16px;
     font-weight: 300;
-    line-height: 23px;
+    line-height: 1.25;
     letter-spacing: 0px;
     text-align: left;
     background: $white-300;
@@ -97,6 +97,9 @@ button,
 }
 
 .header {
+    .navbar-nav {
+        padding-right: 0;
+    }
     .nav-item {
         display: flex;
         align-items: center;
@@ -104,12 +107,12 @@ button,
         padding: 0;
 
         &:not(.logo) {
-            margin-left: 40px;
+            margin-left: 50px;
         }
 
         &:not(.logo) svg {
             margin-right: 5px;
-            height: 22px;
+            height: 30px;
         }
 
         .count {
@@ -226,7 +229,7 @@ button,
 .records {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -4px;
+    margin: 0 -15px;
 
     .record {
         display: flex;
@@ -263,6 +266,8 @@ button,
         background: $primary-300-400;
         color: $white;
         padding: 14px 20px;
+        width: 296px;
+        max-width: 100%;
         font-size: 18px;
         border-radius: 3px;
         border: 0;
@@ -323,7 +328,7 @@ button,
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 30.8%;
+        width: 30%;
         aspect-ratio: 1 / 1;
         flex-wrap: wrap;
         border: solid 20px $primary-300;
@@ -393,6 +398,7 @@ button,
     font-size: 15px;
     display: flex;
     align-items: center;
+    padding-left: 0;
 
     span+span {
         font-size: 22px;
@@ -426,7 +432,7 @@ button,
     display: flex;
     flex-wrap: wrap;
     margin: 5px -15px;
-    max-height: 250px;
+    max-height: 186px;
     overflow-y: auto;
     overflow-x: hidden;
     padding-left: 0;
@@ -478,12 +484,12 @@ button,
     display: flex;
     flex-wrap: wrap;
     flex-flow: row wrap;
-    margin: 0 -6px;
+    margin: 0 -15px;
 
     .diarie {
         display: flex;
         position: relative;
-        padding: 0 6px;
+        padding: 0 5px;
         margin-bottom: 12px;
         width: 25%;
         aspect-ratio: 1 / 1;
@@ -499,6 +505,7 @@ button,
         h5 {
             font-size: 18px;
             font-weight: normal;
+            margin-bottom: 12px;
         }
 
         .content {

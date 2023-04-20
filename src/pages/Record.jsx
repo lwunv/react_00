@@ -36,7 +36,7 @@ function Record() {
 
     return (
         <div className='record container'>
-            <div className='section section-1'>
+            <div className='section section-1 row'>
                 <div className='banner' onClick={() => scrollToElement(1)}>
                     <div>
                         <h3>BODY RECORD</h3>
@@ -56,7 +56,7 @@ function Record() {
                     </div>
                 </div>
             </div>
-            <div ref={myRef1} className='section section-2'>
+            <div ref={myRef1} className='section section-2 row'>
                 <div className='section-title'>
                     <span>BODY<br />RECORD</span>
                     <span>2021.05.21</span>
@@ -69,7 +69,7 @@ function Record() {
                     <button onClick={() => setChartType(4)} className={chartType === 4 ? 'active' : ''} >年</button>
                 </div>
             </div>
-            <div ref={myRef2} className='section section-3'>
+            <div ref={myRef2} className='section section-3 row'>
                 <div className='section-title'>
                     <span>MY<br />EXERCISE</span>
                     <span>2021.05.21</span>
@@ -91,7 +91,7 @@ function Record() {
                 </ul>
             </div>
             <div ref={myRef3} className='section section-4'>
-                <h3>MY DIARY</h3>
+                <h3 className='row mb-1'>MY DIARY</h3>
                 <div className='diaries'>
                     {records?.value?.map((record, index) => (
                         <div className='diarie' key={index}>
