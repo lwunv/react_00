@@ -1,0 +1,11 @@
+@each $name, $color in $theme-colors {
+  .#{$prefix}text-#{$name} {
+    color: $color;
+  }
+}
+
+@each $name, $color in $theme-colors {
+  .#{$prefix}bg-#{$name} {
+    color: $color;
+  }
+}

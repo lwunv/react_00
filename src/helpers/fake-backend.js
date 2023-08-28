@@ -100,19 +100,20 @@ function fakeBackend() {
             }
 
             function getRecords() {
-                const page = pageFromUrl() || 1
-                const type = typeFromUrl()
-                // if (!isAuthenticated()) return unauthorized()
-                const start = (page - 1) * 8
-                const end = start + 8
-                let data = records
-                if (type) data = data.filter((item) => { return item.type === type })
-                data = data.slice(start, end)
-                return ok({ data, page })
+                setTimeout(() => {
+                    const page = pageFromUrl() || 1
+                    const type = typeFromUrl()
+                    // if (!isAuthenticated()) return unauthorized()
+                    const start = (page - 1) * 8
+                    const end = start + 8
+                    let data = records
+                    if (type) data = data.filter((item) => { return item.type === type })
+                    data = data.slice(start, end)
+                    return ok({ data, page })
+                }, 3000);
             }
 
             function getUsers() {
-                console.log('getUsers')
                 if (!isAuthenticated()) return unauthorized()
                 return ok(users.map(x => basicDetails(x)))
             }
@@ -156,7 +157,6 @@ function fakeBackend() {
             }
 
             // helper functions
-
             function ok(body) {
                 resolve({ ok: true, ...headers(), json: () => Promise.resolve(body) })
             }
